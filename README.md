@@ -1,0 +1,1 @@
+# chatgpt-multi-domain-capabilities-assessment
