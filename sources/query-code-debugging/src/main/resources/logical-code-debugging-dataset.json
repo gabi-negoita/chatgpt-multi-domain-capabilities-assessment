@@ -1,0 +1,62 @@
+[
+  {
+    "title": "Fibonacci",
+    "bugType": "logical",
+    "content": "I have the following code snippet that doesn't work. Can you identify the problem and correct it?\npublic static int fibonacci(int number) {\n        if (number == 1 || number == 2) {\n            return 1;\n        }\n\n        return fibonacci(number - 1) + fibonacci(number + 1);\n}",
+    "result": "Correct instruction:\nreturn fibonacci(number - 1) + fibonacci(number - 2);"
+  },
+  {
+    "title": "Palindrome number",
+    "bugType": "logical",
+    "content": "I have the following code snippet that doesn't work. Can you identify the problem and correct it?\npublic static boolean isPalindrome(int number) {\n        int palindrome = number;\n        int reverse = 0;\n\n        while (palindrome != 0) {\n            int remainder = palindrome / 10;\n            reverse = reverse * 10 + remainder;\n            palindrome = palindrome / 10;\n        }\n\n        return number == reverse;\n    }",
+    "result": "Correct instruction:\nint remainder = palindrome % 10;"
+  },
+  {
+    "title": "Factorial",
+    "bugType": "logical",
+    "content": "I have the following code snippet that doesn't work. Can you identify the problem and correct it?\npublic static int factorial(int number) {\n        int result = 0;\n        while (number != 0) {\n            result = result * number;\n            number--;\n        }\n\n        return result;\n    }",
+    "result": "Correct instruction:\nint result = 1;"
+  },
+  {
+    "title": "String anagram",
+    "bugType": "logical",
+    "content": "I have the following code snippet that doesn't work. Can you identify the problem and correct it?\npublic static boolean isAnagram(String word, String anagram) {\n        if (word.length() != anagram.length()) {\n            return false;\n        }\n\n        char[] chars = word.toCharArray();\n\n        for (char c : chars) {\n            int index = anagram.indexOf(c);\n            if (index != -1) {\n                anagram = anagram.substring(1, index) + anagram.substring(index + 1);\n            } else {\n                return false;\n            }\n        }\n\n        return anagram.isEmpty();\n    }",
+    "result": "Correct instruction:\nanagram = anagram.substring(0, index) + anagram.substring(index + 1);"
+  },
+  {
+    "title": "Insertion sort",
+    "bugType": "logical",
+    "content": "I have the following code snippet that doesn't work. Can you identify the problem and correct it?\npublic static void insertionSort(int[] unsorted) {\n        for (int i = 1; i < unsorted.length; i++) {\n            int current = unsorted[i];\n            int j = i;\n\n            while (j > 0 && unsorted[j + 1] > current) {\n                unsorted[j] = unsorted[j - 1];\n                j--;\n            }\n\n            unsorted[j] = current;\n        }\n    }",
+    "result": "Correct instruction:\nwhile (j > 0 && unsorted[j - 1] > current)"
+  },
+  {
+    "title": "Reverse a number",
+    "bugType": "logical",
+    "content": "I have the following code snippet that doesn't work. Can you identify the problem and correct it?\npublic static int reverse(int number) {\n        int reverse = 0;\n        int remainder = 0;\n        do {\n            remainder = number % 10;\n            reverse = reverse / 10 + remainder;\n            number = number / 10;\n\n        } while (number > 0);\n\n        return reverse;\n    }",
+    "result": "Correct instruction:\nreverse = reverse * 10 + remainder;"
+  },
+  {
+    "title": "Print all permutations of string",
+    "bugType": "logical",
+    "content": "I have the following code snippet that doesn't work. Can you identify the problem and correct it?\nprivate static void permutation(String perm, String word) {\n        if (word.isEmpty()) {\n            System.err.println(perm + word);\n        } else {\n            for (int i = 0; i < word.length(); i++) {\n                permutation(perm + word.charAt(i), word.substring(1, i) + word.substring(i + 1));\n            }\n        }\n    }",
+    "result": "Correct instruction:\npermutation(perm + word.charAt(i), word.substring(0, i) + word.substring(i + 1));"
+  },
+  {
+    "title": "Counting sort",
+    "bugType": "logical",
+    "content": "I have the following code snippet that doesn't work. Can you identify the problem and correct it?\npublic static void countingSort(int[] input, int k) {\n        int[] counter = new int[k + 1];\n\n        for (int i : input) {\n            counter[i]++;\n        }\n\n        int ndx = 1;\n        for (int i = 0; i < counter.length; i++) {\n            while (0 < counter[i]) {\n                input[ndx++] = i;\n                counter[i]--;\n            }\n        }\n    }",
+    "result": "Correct instruction:\nint ndx = 0;"
+  },
+  {
+    "title": "Multiply two matrices",
+    "bugType": "logical",
+    "content": "I have the following code snippet that doesn't work. Can you identify the problem and correct it?\npublic static int[][] product(int[][] matrix1, int[][] matrix2) {\n        int columnsOfFirstMatrix = matrix1[0].length;\n        int rowsOfSecondMatrix = matrix2.length;\n\n        if (columnsOfFirstMatrix != rowsOfSecondMatrix) {\n            throw new IllegalArgumentException(String.format(\"Can't multiply matrices, columns of first matrix %d is not equal to rows of second matrix %d\", columnsOfFirstMatrix, rowsOfSecondMatrix));\n        }\n\n        int rowsOfFirstMatrix = matrix1.length;\n        int columnsOfSecondMatrix = matrix2[0].length;\n        int[][] product = new int[rowsOfFirstMatrix][columnsOfSecondMatrix];\n\n        for (int i = 0; i < rowsOfFirstMatrix; i++) {\n            for (int j = 0; j < columnsOfSecondMatrix; j++) {\n\n                int sum = 1;\n                for (int k = 0; k < rowsOfSecondMatrix; k++) {\n                    sum = sum + matrix1[i][k] * matrix2[k][j];\n                }\n\n                product[i][j] = sum;\n            }\n        }\n\n        return product;\n    }",
+    "result": "Correct instruction:\nint sum = 0;"
+  },
+  {
+    "title": "Find GCD",
+    "bugType": "logical",
+    "content": "I have the following code snippet that doesn't work. Can you identify the problem and correct it?\nprivate static int findGCD(int number1, int number2) {\n        if (number2 == 0) {\n            return number1;\n        }\n        \n        return findGCD(number2, number1 / number2);\n    }",
+    "result": "Correct instruction:\nreturn findGCD(number2, number1 % number2);"
+  }
+]

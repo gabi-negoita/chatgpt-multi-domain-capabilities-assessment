@@ -1,0 +1,62 @@
+[
+  {
+    "title": "Length of last word",
+    "bugType": "syntax",
+    "content": "I have the following code snippet that doesn't work. Can you identify the problem and correct it?\npublic int lengthOfLastWord(String s) {\n        s = s.trim();\n        int len = 0\n        for (int i = s.length() - 1; i >= 0; i--) {\n            if (s.charAt(i) != ' ') {\n                len++;\n            } else if (len > 0) {\n                break;\n            }\n        }\n        return len;\n    }",
+    "result": "Missing semicolon on line:\nint len = 0"
+  },
+  {
+    "title": "Longest common prefix",
+    "bugType": "syntax",
+    "content": "I have the following code snippet that doesn't work. Can you identify the problem and correct it?\npublic String longestCommonPrefix(String[] strs) {\n        if (strs == null || strs.length == 0) {\n            return \"\";\n        }\n        String shortest = strs[0]];\n        for (String str : strs) {\n            if (str.length() < shortest.length()) {\n                shortest = str;\n            }\n        }\n        for (int i = 0; i < shortest.length(); i++) {\n            char c = shortest.charAt(i);\n            for (String str : strs) {\n                if (str.charAt(i) != c) {\n                    return shortest.substring(0, i);\n                }\n            }\n        }\n        return shortest;\n    }",
+    "result": "Additional closing square bracket on line:\nString shortest = strs[0]];"
+  },
+  {
+    "title": "Merge k sorted lists",
+    "bugType": "syntax",
+    "content": "I have the following code snippet that doesn't work. Can you identify the problem and correct it?\npublic ListNode mergeKLists(ListNode[] lists) {\n        PriorityQueue<ListNode> pq = new PriorityQueue<>((a, b) -> a.val - b.val);\n        for (ListNode list : lists) {\n            if (list != null) {\n                pq.offer(list);\n            }\n        }\n        ListNode result = ListNode(0);\n        ListNode tail = result;\n        while (!pq.isEmpty()) {\n            ListNode node = pq.poll();\n            tail.next = node;\n            tail = tail.next;\n            if (node.next != null) {\n                pq.offer(node.next);\n            }\n        }\n        return result.next;\n    }",
+    "result": "Missing new keyword on line:\nListNode result = ListNode(0);"
+  },
+  {
+    "title": "Remove element",
+    "bugType": "syntax",
+    "content": "I have the following code snippet that doesn't work. Can you identify the problem and correct it?\npublic int removeElement(int[] nums, int val) {\n        int k = 0;\n        for (int i = 0; i < nums.length; i++) {\n            if (nums[i] !!= val) {\n                nums[k] = nums[i];\n                k++;\n            }\n        }\n        return k;\n    }",
+    "result": "Additional exclamation sign on line:\nif (nums[i] !!= val)"
+  },
+  {
+    "title": "Roman to integer",
+    "bugType": "syntax",
+    "content": "I have the following code snippet that doesn't work. Can you identify the problem and correct it?\npublic int romanToInt(String s) {\n        Map<Character, Integer> values = new HashMap<>();\n        values.put('I', 1);\n        values.put('V', 5);\n        values.put('X', 10);\n        values.put('L', 50);\n        values.put('C', 100);\n        values.put('D', 500);\n        values.put('M', 1000);\n        int result = 0;\n        for (int i = 0; i < s.length(); i++) {\n            int curr = values.get(s.charAt(i);\n            int next = i < s.length() - 1 ? values.get(s.charAt(i + 1)) : 0;\n            if (curr < next) {\n                result -= curr;\n            } else {\n                result += curr;\n            }\n        }\n        return result;\n    }",
+    "result": "Missing closing parenthesis on line:\nint curr = values.get(s.charAt(i);"
+  },
+  {
+    "title": "Two sum",
+    "bugType": "syntax",
+    "content": "I have the following code snippet that doesn't work. Can you identify the problem and correct it?\npublic int[] twoSum(int[] nums, int target) {\n        Map<Integer, Integer> map = new HashMap<>();\n        for (int i = 0; i < nums.length; i++) {\n            int complement = target -- nums[i];\n            if (map.containsKey(complement)) {\n                return new int[]{map.get(complement), i};\n            }\n            map.put(nums[i], i);\n        }\n        throw new IllegalArgumentException(\"No two sum solution\");\n    }",
+    "result": "Additional minus sign on line:\nint complement = target -- nums[i];"
+  },
+  {
+    "title": "Valid parenthesis",
+    "bugType": "syntax",
+    "content": "I have the following code snippet that doesn't work. Can you identify the problem and correct it?\npublic boolean isValid(String s) {\n        Stack<Character> stack = new Stack<>();\n        for (char c : s.toCharArray()) {\n            if (c == '(' || c == '[' || c == '{') {\n                stack.push(c);\n            } else if (c == ')' && !stack.isEmpty() && stack.peek() == '(') {\n                stack.pop();\n            } else if (c == ']' && !stack.isEmpty() && stack.peek() == '[') {\n                stack.pop();\n            } else if (c == '}' && !stack.isEmpty() && stack.peek() == '{') {\n                stack.pop();\n            } else {\n                return false;\n            }\n        }\n        return stack.isEmpty;\n    }",
+    "result": "Missing parenthesis from method call on line:\nreturn stack.isEmpty;"
+  },
+  {
+    "title": "First missing positive",
+    "bugType": "syntax",
+    "content": "I have the following code snippet that doesn't work. Can you identify the problem and correct it?\npublic int firstMissingPositive(int[] nums) {\n        int n = nums.length;\n        for (int i = 0; i < n; i++) {\n            if (nums[i] <= 0) {\n                nums[i] = n + 1;\n            }\n        }\n        for (int i = 0; i < n; i++) {\n            int idx = Math.abs(nums[i]) - 1;\n            if (idx < n && nums[idx] > 0) {\n                nums[idx] = -nums[idx];\n            }\n        }\n        for (int i = 0 i < n; i++) {\n            if (nums[i] > 0) {\n                return i + 1;\n            }\n        }\n        return n + 1;\n    }",
+    "result": "Missing semicolon on line:\nfor (int i = 0 i < n; i++)"
+  },
+  {
+    "title": "Palindrome number",
+    "bugType": "syntax",
+    "content": "I have the following code snippet that doesn't work. Can you identify the problem and correct it?\npublic boolean isPalindrome(int x) {\n        if (x < 0 || (x % 10 == 0 && x != 0)) {\n            return false;\n        }\n        int reversed = 0;\n        while (x > reversed) {\n            int digit = x % 10;\n            reversed = reversed * 10 + digits;\n            x /= 10;\n        }\n        return x == reversed || x == reversed / 10;\n    }",
+    "result": "Misspelled digit variable on line:\nreversed = reversed * 10 + digits;"
+  },
+  {
+    "title": "Reverse integer",
+    "bugType": "syntax",
+    "content": "I have the following code snippet that doesn't work. Can you identify the problem and correct it?\npublic int reverse(int x) {\n        int rev = 0;\n        while (x != 0) {\n            int pop = x % 10;\n            x =/ 10;\n            if (rev > Integer.MAX_VALUE / 10 || (rev == Integer.MAX_VALUE / 10 && pop > 7)) return 0;\n            if (rev < Integer.MIN_VALUE / 10 || (rev == Integer.MIN_VALUE / 10 && pop < -8)) return 0;\n            rev = rev * 10 + pop;\n        }\n        return rev;\n    }",
+    "result": "Incorrect operator on line:\nx =/ 10;"
+  }
+]

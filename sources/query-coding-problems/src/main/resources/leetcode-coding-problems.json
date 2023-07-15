@@ -1,0 +1,182 @@
+[
+  {
+    "title": "Two Sum",
+    "difficulty": "easy",
+    "content": "Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target.\n\nYou may assume that each input would have exactly one solution, and you may not use the same element twice.\n\nYou can return the answer in any order.\n\n\n\nExample 1:\n\nInput: nums = [2,7,11,15], target = 9\nOutput: [0,1]\nExplanation: Because nums[0] + nums[1] == 9, we return [0, 1].\nExample 2:\n\nInput: nums = [3,2,4], target = 6\nOutput: [1,2]\nExample 3:\n\nInput: nums = [3,3], target = 6\nOutput: [0,1]\n\n\nConstraints:\n\n2 <= nums.length <= 10^4\n-10^9 <= nums[i] <= 10^9\n-10^9 <= target <= 10^9\nOnly one valid answer exists.\n\n\nFollow-up: Can you come up with an algorithm that is less than O(n^2) time complexity?",
+    "testCases": "[2,7,11,15]\n9\n[3,2,4]\n6\n[3,3]\n6"
+  },
+  {
+    "title": "Palindrome Number",
+    "difficulty": "easy",
+    "content": "Given an integer x, return true if x is a palindrome, and false otherwise.\n\n\n\nExample 1:\n\nInput: x = 121\nOutput: true\nExplanation: 121 reads as 121 from left to right and from right to left.\nExample 2:\n\nInput: x = -121\nOutput: false\nExplanation: From left to right, it reads -121. From right to left, it becomes 121-. Therefore it is not a palindrome.\nExample 3:\n\nInput: x = 10\nOutput: false\nExplanation: Reads 01 from right to left. Therefore it is not a palindrome.\n\n\nConstraints:\n\n-2^31 <= x <= 2^31 - 1\n\n\nFollow up: Could you solve it without converting the integer to a string?",
+    "testCases": "121\n-121\n10"
+  },
+  {
+    "title": "Roman to Integer",
+    "difficulty": "easy",
+    "content": "Roman numerals are represented by seven different symbols: I, V, X, L, C, D and M.\n\nSymbol       Value\nI             1\nV             5\nX             10\nL             50\nC             100\nD             500\nM             1000\nFor example, 2 is written as II in Roman numeral, just two ones added together. 12 is written as XII, which is simply X + II. The number 27 is written as XXVII, which is XX + V + II.\n\nRoman numerals are usually written largest to smallest from left to right. However, the numeral for four is not IIII. Instead, the number four is written as IV. Because the one is before the five we subtract it making four. The same principle applies to the number nine, which is written as IX. There are six instances where subtraction is used:\n\nI can be placed before V (5) and X (10) to make 4 and 9.\nX can be placed before L (50) and C (100) to make 40 and 90.\nC can be placed before D (500) and M (1000) to make 400 and 900.\nGiven a roman numeral, convert it to an integer.\n\n\n\nExample 1:\n\nInput: s = \"III\"\nOutput: 3\nExplanation: III = 3.\nExample 2:\n\nInput: s = \"LVIII\"\nOutput: 58\nExplanation: L = 50, V= 5, III = 3.\nExample 3:\n\nInput: s = \"MCMXCIV\"\nOutput: 1994\nExplanation: M = 1000, CM = 900, XC = 90 and IV = 4.\n\n\nConstraints:\n\n1 <= s.length <= 15\ns contains only the characters ('I', 'V', 'X', 'L', 'C', 'D', 'M').\nIt is guaranteed that s is a valid roman numeral in the range [1, 3999].",
+    "testCases": "\"III\"\n\"LVIII\"\n\"MCMXCIV\""
+  },
+  {
+    "title": "Longest Common Prefix",
+    "difficulty": "easy",
+    "content": "Write a function to find the longest common prefix string amongst an array of strings.\n\nIf there is no common prefix, return an empty string \"\".\n\n\n\nExample 1:\n\nInput: strs = [\"flower\",\"flow\",\"flight\"]\nOutput: \"fl\"\nExample 2:\n\nInput: strs = [\"dog\",\"racecar\",\"car\"]\nOutput: \"\"\nExplanation: There is no common prefix among the input strings.\n\n\nConstraints:\n\n1 <= strs.length <= 200\n0 <= strs[i].length <= 200\nstrs[i] consists of only lowercase English letters.",
+    "testCases": "[\"flower\",\"flow\",\"flight\"]\n[\"dog\",\"racecar\",\"car\"]"
+  },
+  {
+    "title": "Valid Parentheses",
+    "difficulty": "easy",
+    "content": "Given a string s containing just the characters '(', ')', '{', '}', '[' and ']', determine if the input string is valid.\n\nAn input string is valid if:\n\nOpen brackets must be closed by the same type of brackets.\nOpen brackets must be closed in the correct order.\nEvery close bracket has a corresponding open bracket of the same type.\n\n\nExample 1:\n\nInput: s = \"()\"\nOutput: true\nExample 2:\n\nInput: s = \"()[]{}\"\nOutput: true\nExample 3:\n\nInput: s = \"(]\"\nOutput: false\n\n\nConstraints:\n\n1 <= s.length <= 10^4\ns consists of parentheses only '()[]{}'.",
+    "testCases": "\"()\"\n\"()[]{}\"\n\"(]\""
+  },
+  {
+    "title": "Merge Two Sorted Lists",
+    "difficulty": "easy",
+    "content": "You are given the heads of two sorted linked lists list1 and list2.\n\nMerge the two lists in a one sorted list. The list should be made by splicing together the nodes of the first two lists.\n\nReturn the head of the merged linked list.\n\n\n\nExample 1:\nInput: list1 = [1,2,4], list2 = [1,3,4]\nOutput: [1,1,2,3,4,4]\n\nExample 2:\nInput: list1 = [], list2 = []\nOutput: []\n\nExample 3:\nInput: list1 = [], list2 = [0]\nOutput: [0]\n\n\nConstraints:\n        \nThe number of nodes in both lists is in the range [0, 50].\n-100 <= Node.val <= 100\nBoth list1 and list2 are sorted in non-decreasing order.",
+    "testCases": "[1,2,4]\n[1,3,4]\n[]\n[]\n[]\n[0]"
+  },
+  {
+    "title": "Remove Duplicates from Sorted Array",
+    "difficulty": "easy",
+    "content": "Given an integer array nums sorted in non-decreasing order, remove the duplicates in-place such that each unique element appears only once. The relative order of the elements should be kept the same. Then return the number of unique elements in nums.\n\nConsider the number of unique elements of nums to be k, to get accepted, you need to do the following things:\n\nChange the array nums such that the first k elements of nums contain the unique elements in the order they were present in nums initially. The remaining elements of nums are not important as well as the size of nums.\nReturn k.\nCustom Judge:\n\nThe judge will test your solution with the following code:\n\nint[] nums = [...]; // Input array\nint[] expectedNums = [...]; // The expected answer with correct length\n\nint k = removeDuplicates(nums); // Calls your implementation\n\nassert k == expectedNums.length;\nfor (int i = 0; i < k; i++) {\nassert nums[i] == expectedNums[i];\n}\nIf all assertions pass, then your solution will be accepted.\n\n\n\nExample 1:\n\nInput: nums = [1,1,2]\nOutput: 2, nums = [1,2,_]\nExplanation: Your function should return k = 2, with the first two elements of nums being 1 and 2 respectively.\nIt does not matter what you leave beyond the returned k (hence they are underscores).\nExample 2:\n\nInput: nums = [0,0,1,1,1,2,2,3,3,4]\nOutput: 5, nums = [0,1,2,3,4,_,_,_,_,_]\nExplanation: Your function should return k = 5, with the first five elements of nums being 0, 1, 2, 3, and 4 respectively.\nIt does not matter what you leave beyond the returned k (hence they are underscores).\n\n\nConstraints:\n\n1 <= nums.length <= 3 * 10^4\n-100 <= nums[i] <= 100\nnums is sorted in non-decreasing order.",
+    "testCases": "[1,1,2]\n[0,0,1,1,1,2,2,3,3,4]"
+  },
+  {
+    "title": "Remove Element",
+    "difficulty": "easy",
+    "content": "Given an integer array nums and an integer val, remove all occurrences of val in nums in-place. The order of the elements may be changed. Then return the number of elements in nums which are not equal to val.\n\nConsider the number of elements in nums which are not equal to val be k, to get accepted, you need to do the following things:\n\nChange the array nums such that the first k elements of nums contain the elements which are not equal to val. The remaining elements of nums are not important as well as the size of nums.\nReturn k.\nCustom Judge:\n\nThe judge will test your solution with the following code:\n\nint[] nums = [...]; // Input array\nint val = ...; // Value to remove\nint[] expectedNums = [...]; // The expected answer with correct length.\n// It is sorted with no values equaling val.\n\nint k = removeElement(nums, val); // Calls your implementation\n\nassert k == expectedNums.length;\nsort(nums, 0, k); // Sort the first k elements of nums\nfor (int i = 0; i < actualLength; i++) {\nassert nums[i] == expectedNums[i];\n}\nIf all assertions pass, then your solution will be accepted.\n\n\n\nExample 1:\n\nInput: nums = [3,2,2,3], val = 3\nOutput: 2, nums = [2,2,_,_]\nExplanation: Your function should return k = 2, with the first two elements of nums being 2.\nIt does not matter what you leave beyond the returned k (hence they are underscores).\nExample 2:\n\nInput: nums = [0,1,2,2,3,0,4,2], val = 2\nOutput: 5, nums = [0,1,4,0,3,_,_,_]\nExplanation: Your function should return k = 5, with the first five elements of nums containing 0, 0, 1, 3, and 4.\nNote that the five elements can be returned in any order.\nIt does not matter what you leave beyond the returned k (hence they are underscores).\n\n\nConstraints:\n\n0 <= nums.length <= 100\n0 <= nums[i] <= 50\n0 <= val <= 100",
+    "testCases": "[3,2,2,3]\n3\n[0,1,2,2,3,0,4,2]\n2"
+  },
+  {
+    "title": "Search Insert Position",
+    "difficulty": "easy",
+    "content": "Given a sorted array of distinct integers and a target value, return the index if the target is found. If not, return the index where it would be if it were inserted in order.\n\nYou must write an algorithm with O(log n) runtime complexity.\n\n\n\nExample 1:\n\nInput: nums = [1,3,5,6], target = 5\nOutput: 2\nExample 2:\n\nInput: nums = [1,3,5,6], target = 2\nOutput: 1\nExample 3:\n\nInput: nums = [1,3,5,6], target = 7\nOutput: 4\n\n\nConstraints:\n\n1 <= nums.length <= 10^4\n-10^4 <= nums[i] <= 10^4\nnums contains distinct values sorted in ascending order.\n-10^4 <= target <= 10^4",
+    "testCases": "[1,3,5,6]\n5\n[1,3,5,6]\n2\n[1,3,5,6]\n7"
+  },
+  {
+    "title": "Length of Last Word",
+    "difficulty": "easy",
+    "content": "Given a string s consisting of words and spaces, return the length of the last word in the string.\n\nA word is a maximal\nsubstring\nconsisting of non-space characters only.\n\n\n\nExample 1:\n\nInput: s = \"Hello World\"\nOutput: 5\nExplanation: The last word is \"World\" with length 5.\nExample 2:\n\nInput: s = \"   fly me   to   the moon  \"\nOutput: 4\nExplanation: The last word is \"moon\" with length 4.\nExample 3:\n\nInput: s = \"luffy is still joyboy\"\nOutput: 6\nExplanation: The last word is \"joyboy\" with length 6.\n\n\nConstraints:\n\n1 <= s.length <= 104\ns consists of only English letters and spaces ' '.\nThere will be at least one word in s.",
+    "testCases": "\"Hello World\"\n\"   fly me   to   the moon  \"\n\"luffy is still joyboy\""
+  },
+  {
+    "title": "Add Two Numbers",
+    "difficulty": "medium",
+    "content": "You are given two non-empty linked lists representing two non-negative integers. The digits are stored in reverse order, and each of their nodes contains a single digit. Add the two numbers and return the sum as a linked list.\n\nYou may assume the two numbers do not contain any leading zero, except the number 0 itself.\n\n\n\nExample 1:\n\n\nInput: l1 = [2,4,3], l2 = [5,6,4]\nOutput: [7,0,8]\nExplanation: 342 + 465 = 807.\nExample 2:\n\nInput: l1 = [0], l2 = [0]\nOutput: [0]\nExample 3:\n\nInput: l1 = [9,9,9,9,9,9,9], l2 = [9,9,9,9]\nOutput: [8,9,9,9,0,0,0,1]\n\n\nConstraints:\n\nThe number of nodes in each linked list is in the range [1, 100].\n0 <= Node.val <= 9\nIt is guaranteed that the list represents a number that does not have leading zeros.",
+    "testCases": "[2,4,3]\n[5,6,4]\n[0]\n[0]\n[9,9,9,9,9,9,9]\n[9,9,9,9]"
+  },
+  {
+    "title": "Longest Substring Without Repeating Characters",
+    "difficulty": "medium",
+    "content": "Given a string s, find the length of the longest\nsubstring\nwithout repeating characters.\n\n\n\nExample 1:\n\nInput: s = \"abcabcbb\"\nOutput: 3\nExplanation: The answer is \"abc\", with the length of 3.\nExample 2:\n\nInput: s = \"bbbbb\"\nOutput: 1\nExplanation: The answer is \"b\", with the length of 1.\nExample 3:\n\nInput: s = \"pwwkew\"\nOutput: 3\nExplanation: The answer is \"wke\", with the length of 3.\nNotice that the answer must be a substring, \"pwke\" is a subsequence and not a substring.\n\n\nConstraints:\n\n0 <= s.length <= 5 * 10^4\ns consists of English letters, digits, symbols and spaces.",
+    "testCases": "\"abcabcbb\"\n\"bbbbb\"\n\"pwwkew\""
+  },
+  {
+    "title": "Longest Palindromic Substring",
+    "difficulty": "medium",
+    "content": "Given a string s, return the longest\npalindromic\n\nsubstring\nin s.\n\n\n\nExample 1:\n\nInput: s = \"babad\"\nOutput: \"bab\"\nExplanation: \"aba\" is also a valid answer.\nExample 2:\n\nInput: s = \"cbbd\"\nOutput: \"bb\"\n\n\nConstraints:\n\n1 <= s.length <= 1000\ns consist of only digits and English letters.",
+    "testCases": "\"babad\"\n\"cbbd\""
+  },
+  {
+    "title": "Zigzag Conversion",
+    "difficulty": "medium",
+    "content": "The string \"PAYPALISHIRING\" is written in a zigzag pattern on a given number of rows like this: (you may want to display this pattern in a fixed font for better legibility)\n\nP   A   H   N\nA P L S I I G\nY   I   R\nAnd then read line by line: \"PAHNAPLSIIGYIR\"\n\nWrite the code that will take a string and make this conversion given a number of rows:\n\nstring convert(string s, int numRows);\n \n\nExample 1:\n\nInput: s = \"PAYPALISHIRING\", numRows = 3\nOutput: \"PAHNAPLSIIGYIR\"\nExample 2:\n\nInput: s = \"PAYPALISHIRING\", numRows = 4\nOutput: \"PINALSIGYAHRPI\"\nExplanation:\nP     I    N\nA   L S  I G\nY A   H R\nP     I\nExample 3:\n\nInput: s = \"A\", numRows = 1\nOutput: \"A\"\n \n\nConstraints:\n\n1 <= s.length <= 1000\ns consists of English letters (lower-case and upper-case), ',' and '.'.\n1 <= numRows <= 1000",
+    "testCases": "\"PAYPALISHIRING\"\n3\n\"PAYPALISHIRING\"\n4\n\"A\"\n1"
+  },
+  {
+    "title": "Reverse Integer",
+    "difficulty": "medium",
+    "content": "Given a signed 32-bit integer x, return x with its digits reversed. If reversing x causes the value to go outside the signed 32-bit integer range [-2^31, 2^31 - 1], then return 0.\n\nAssume the environment does not allow you to store 64-bit integers (signed or unsigned).\n\n\n\nExample 1:\n\nInput: x = 123\nOutput: 321\nExample 2:\n\nInput: x = -123\nOutput: -321\nExample 3:\n\nInput: x = 120\nOutput: 21\n\n\nConstraints:\n\n-2^31 <= x <= 2^31 - 1",
+    "testCases": "123\n-123\n120"
+  },
+  {
+    "title": "String to Integer (atoi)",
+    "difficulty": "medium",
+    "content": "Implement the myAtoi(string s) function, which converts a string to a 32-bit signed integer (similar to C/C++'s atoi function).\n\nThe algorithm for myAtoi(string s) is as follows:\n\nRead in and ignore any leading whitespace.\nCheck if the next character (if not already at the end of the string) is '-' or '+'. Read this character in if it is either. This determines if the final result is negative or positive respectively. Assume the result is positive if neither is present.\nRead in next the characters until the next non-digit character or the end of the input is reached. The rest of the string is ignored.\nConvert these digits into an integer (i.e. \"123\" -> 123, \"0032\" -> 32). If no digits were read, then the integer is 0. Change the sign as necessary (from step 2).\nIf the integer is out of the 32-bit signed integer range [-2^31, 2^31 - 1], then clamp the integer so that it remains in the range. Specifically, integers less than -2^31 should be clamped to -2^31, and integers greater than 2^31 - 1 should be clamped to 2^31 - 1.\nReturn the integer as the final result.\nNote:\n\nOnly the space character ' ' is considered a whitespace character.\nDo not ignore any characters other than the leading whitespace or the rest of the string after the digits.\n\n\nExample 1:\n\nInput: s = \"42\"\nOutput: 42\nExplanation: The underlined characters are what is read in, the caret is the current reader position.\nStep 1: \"42\" (no characters read because there is no leading whitespace)\n^\nStep 2: \"42\" (no characters read because there is neither a '-' nor '+')\n^\nStep 3: \"42\" (\"42\" is read in)\n^\nThe parsed integer is 42.\nSince 42 is in the range [-2^31, 2^31 - 1], the final result is 42.\nExample 2:\n\nInput: s = \"   -42\"\nOutput: -42\nExplanation:\nStep 1: \"   -42\" (leading whitespace is read and ignored)\n^\nStep 2: \"   -42\" ('-' is read, so the result should be negative)\n^\nStep 3: \"   -42\" (\"42\" is read in)\n^\nThe parsed integer is -42.\nSince -42 is in the range [-2^31, 2^31 - 1], the final result is -42.\nExample 3:\n\nInput: s = \"4193 with words\"\nOutput: 4193\nExplanation:\nStep 1: \"4193 with words\" (no characters read because there is no leading whitespace)\n^\nStep 2: \"4193 with words\" (no characters read because there is neither a '-' nor '+')\n^\nStep 3: \"4193 with words\" (\"4193\" is read in; reading stops because the next character is a non-digit)\n^\nThe parsed integer is 4193.\nSince 4193 is in the range [-2^31, 2^31 - 1], the final result is 4193.\n\n\nConstraints:\n\n0 <= s.length <= 200\ns consists of English letters (lower-case and upper-case), digits (0-9), ' ', '+', '-', and '.'.",
+    "testCases": "\"42\"\n\"   -42\"\n\"4193 with words\""
+  },
+  {
+    "title": "Container With Most Water",
+    "difficulty": "medium",
+    "content": "You are given an integer array height of length n. There are n vertical lines drawn such that the two endpoints of the i^th line are (i, 0) and (i, height[i]).\n\nFind two lines that together with the x-axis form a container, such that the container contains the most water.\n\nReturn the maximum amount of water a container can store.\n\nNotice that you may not slant the container.\n\n\n\nExample 1:\n\n\nInput: height = [1,8,6,2,5,4,8,3,7]\nOutput: 49\nExplanation: The above vertical lines are represented by array [1,8,6,2,5,4,8,3,7]. In this case, the max area of water (blue section) the container can contain is 49.\nExample 2:\n\nInput: height = [1,1]\nOutput: 1\n\n\nConstraints:\n\nn == height.length\n2 <= n <= 105\n0 <= height[i] <= 10^4",
+    "testCases": "[1,8,6,2,5,4,8,3,7]\n[1,1]"
+  },
+  {
+    "title": "3Sum",
+    "difficulty": "medium",
+    "content": "Given an integer array nums, return all the triplets [nums[i], nums[j], nums[k]] such that i != j, i != k, and j != k, and nums[i] + nums[j] + nums[k] == 0.\n\nNotice that the solution set must not contain duplicate triplets.\n\n\n\nExample 1:\n\nInput: nums = [-1,0,1,2,-1,-4]\nOutput: [[-1,-1,2],[-1,0,1]]\nExplanation:\nnums[0] + nums[1] + nums[2] = (-1) + 0 + 1 = 0.\nnums[1] + nums[2] + nums[4] = 0 + 1 + (-1) = 0.\nnums[0] + nums[3] + nums[4] = (-1) + 2 + (-1) = 0.\nThe distinct triplets are [-1,0,1] and [-1,-1,2].\nNotice that the order of the output and the order of the triplets does not matter.\nExample 2:\n\nInput: nums = [0,1,1]\nOutput: []\nExplanation: The only possible triplet does not sum up to 0.\nExample 3:\n\nInput: nums = [0,0,0]\nOutput: [[0,0,0]]\nExplanation: The only possible triplet sums up to 0.\n\n\nConstraints:\n\n3 <= nums.length <= 3000\n-10^5 <= nums[i] <= 10^5",
+    "testCases": "[-1,0,1,2,-1,-4]\n[0,1,1]\n[0,0,0]"
+  },
+  {
+    "title": "3Sum Closest",
+    "difficulty": "medium",
+    "content": "Given an integer array nums of length n and an integer target, find three integers in nums such that the sum is closest to target.\n\nReturn the sum of the three integers.\n\nYou may assume that each input would have exactly one solution.\n\n\n\nExample 1:\n\nInput: nums = [-1,2,1,-4], target = 1\nOutput: 2\nExplanation: The sum that is closest to the target is 2. (-1 + 2 + 1 = 2).\nExample 2:\n\nInput: nums = [0,0,0], target = 1\nOutput: 0\nExplanation: The sum that is closest to the target is 0. (0 + 0 + 0 = 0).\n\n\nConstraints:\n\n3 <= nums.length <= 500\n-1000 <= nums[i] <= 1000\n-10^4 <= target <= 10^4",
+    "testCases": "[-1,2,1,-4]\n1\n[0,0,0]\n1"
+  },
+  {
+    "title": "Letter Combinations of a Phone Number",
+    "difficulty": "medium",
+    "content": "Given a string containing digits from 2-9 inclusive, return all possible letter combinations that the number could represent. Return the answer in any order.\n\nA mapping of digits to letters (just like on the telephone buttons) is given below. Note that 1 does not map to any letters.\n\n\n\n\nExample 1:\n\nInput: digits = \"23\"\nOutput: [\"ad\",\"ae\",\"af\",\"bd\",\"be\",\"bf\",\"cd\",\"ce\",\"cf\"]\nExample 2:\n\nInput: digits = \"\"\nOutput: []\nExample 3:\n\nInput: digits = \"2\"\nOutput: [\"a\",\"b\",\"c\"]\n\n\nConstraints:\n\n0 <= digits.length <= 4\ndigits[i] is a digit in the range ['2', '9'].",
+    "testCases": "\"23\"\n\"\"\n\"2\""
+  },
+  {
+    "title": "Median of Two Sorted Arrays",
+    "difficulty": "hard",
+    "content": "Given two sorted arrays nums1 and nums2 of size m and n respectively, return the median of the two sorted arrays.\n\nThe overall run time complexity should be O(log (m+n)).\n\n\n\nExample 1:\n\nInput: nums1 = [1,3], nums2 = [2]\nOutput: 2.00000\nExplanation: merged array = [1,2,3] and median is 2.\nExample 2:\n\nInput: nums1 = [1,2], nums2 = [3,4]\nOutput: 2.50000\nExplanation: merged array = [1,2,3,4] and median is (2 + 3) / 2 = 2.5.\n\n\nConstraints:\n\nnums1.length == m\nnums2.length == n\n0 <= m <= 1000\n0 <= n <= 1000\n1 <= m + n <= 2000\n-10^6 <= nums1[i], nums2[i] <= 10^6\n",
+    "testCases": "[1,3]\n[2]\n[1,2]\n[3,4]"
+  },
+  {
+    "title": "Regular Expression Matching",
+    "difficulty": "hard",
+    "content": "Given an input string s and a pattern p, implement regular expression matching with support for '.' and '*' where:\n\n'.' Matches any single character.\u200B\u200B\u200B\u200B\n'*' Matches zero or more of the preceding element.\nThe matching should cover the entire input string (not partial).\n\n\n\nExample 1:\n\nInput: s = \"aa\", p = \"a\"\nOutput: false\nExplanation: \"a\" does not match the entire string \"aa\".\nExample 2:\n\nInput: s = \"aa\", p = \"a*\"\nOutput: true\nExplanation: '*' means zero or more of the preceding element, 'a'. Therefore, by repeating 'a' once, it becomes \"aa\".\nExample 3:\n\nInput: s = \"ab\", p = \".*\"\nOutput: true\nExplanation: \".*\" means \"zero or more (*) of any character (.)\".\n\n\nConstraints:\n\n1 <= s.length <= 20\n1 <= p.length <= 20\ns contains only lowercase English letters.\np contains only lowercase English letters, '.', and '*'.\nIt is guaranteed for each appearance of the character '*', there will be a previous valid character to match.",
+    "testCases": "\"aa\"\n\"a\"\n\"aa\"\n\"a*\"\n\"ab\"\n\".*\""
+  },
+  {
+    "title": "Merge k Sorted Lists",
+    "difficulty": "hard",
+    "content": "You are given an array of k linked-lists lists, each linked-list is sorted in ascending order.\n\nMerge all the linked-lists into one sorted linked-list and return it.\n\n\n\nExample 1:\n\nInput: lists = [[1,4,5],[1,3,4],[2,6]]\nOutput: [1,1,2,3,4,4,5,6]\nExplanation: The linked-lists are:\n[\n1->4->5,\n1->3->4,\n2->6\n]\nmerging them into one sorted list:\n1->1->2->3->4->4->5->6\nExample 2:\n\nInput: lists = []\nOutput: []\nExample 3:\n\nInput: lists = [[]]\nOutput: []\n\n\nConstraints:\n\nk == lists.length\n0 <= k <= 10^4\n0 <= lists[i].length <= 500\n-10^4 <= lists[i][j] <= 10^4\nlists[i] is sorted in ascending order.\nThe sum of lists[i].length will not exceed 10^4.",
+    "testCases": "[[1,4,5],[1,3,4],[2,6]]\n[]\n[[]]"
+  },
+  {
+    "title": "Reverse Nodes in k-Group",
+    "difficulty": "hard",
+    "content": "Given the head of a linked list, reverse the nodes of the list k at a time, and return the modified list.\n\nk is a positive integer and is less than or equal to the length of the linked list. If the number of nodes is not a multiple of k then left-out nodes, in the end, should remain as it is.\n\nYou may not alter the values in the list's nodes, only nodes themselves may be changed.\n\n\n\nExample 1:\nInput: head = [1,2,3,4,5], k = 2\nOutput: [2,1,4,3,5]\n\nExample 2:\nInput: head = [1,2,3,4,5], k = 3\nOutput: [3,2,1,4,5]\n\n\nConstraints:\n\nThe number of nodes in the list is n.\n1 <= k <= n <= 5000\n0 <= Node.val <= 1000\n\n\nFollow-up: Can you solve the problem in O(1) extra memory space?",
+    "testCases": "[1,2,3,4,5]\n2\n[1,2,3,4,5]\n3"
+  },
+  {
+    "title": "Substring with Concatenation of All Words",
+    "difficulty": "hard",
+    "content": "You are given a string s and an array of strings words. All the strings of words are of the same length.\n\nA concatenated substring in s is a substring that contains all the strings of any permutation of words concatenated.\n\nFor example, if words = [\"ab\",\"cd\",\"ef\"], then \"abcdef\", \"abefcd\", \"cdabef\", \"cdefab\", \"efabcd\", and \"efcdab\" are all concatenated strings. \"acdbef\" is not a concatenated substring because it is not the concatenation of any permutation of words.\nReturn the starting indices of all the concatenated substrings in s. You can return the answer in any order.\n\n\n\nExample 1:\n\nInput: s = \"barfoothefoobarman\", words = [\"foo\",\"bar\"]\nOutput: [0,9]\nExplanation: Since words.length == 2 and words[i].length == 3, the concatenated substring has to be of length 6.\nThe substring starting at 0 is \"barfoo\". It is the concatenation of [\"bar\",\"foo\"] which is a permutation of words.\nThe substring starting at 9 is \"foobar\". It is the concatenation of [\"foo\",\"bar\"] which is a permutation of words.\nThe output order does not matter. Returning [9,0] is fine too.\nExample 2:\n\nInput: s = \"wordgoodgoodgoodbestword\", words = [\"word\",\"good\",\"best\",\"word\"]\nOutput: []\nExplanation: Since words.length == 4 and words[i].length == 4, the concatenated substring has to be of length 16.\nThere is no substring of length 16 is s that is equal to the concatenation of any permutation of words.\nWe return an empty array.\nExample 3:\n\nInput: s = \"barfoofoobarthefoobarman\", words = [\"bar\",\"foo\",\"the\"]\nOutput: [6,9,12]\nExplanation: Since words.length == 3 and words[i].length == 3, the concatenated substring has to be of length 9.\nThe substring starting at 6 is \"foobarthe\". It is the concatenation of [\"foo\",\"bar\",\"the\"] which is a permutation of words.\nThe substring starting at 9 is \"barthefoo\". It is the concatenation of [\"bar\",\"the\",\"foo\"] which is a permutation of words.\nThe substring starting at 12 is \"thefoobar\". It is the concatenation of [\"the\",\"foo\",\"bar\"] which is a permutation of words.\n\n\nConstraints:\n\n1 <= s.length <= 10^4\n1 <= words.length <= 5000\n1 <= words[i].length <= 30\ns and words[i] consist of lowercase English letters.",
+    "testCases": "\"barfoothefoobarman\"\n[\"foo\",\"bar\"]\n\"wordgoodgoodgoodbestword\"\n[\"word\",\"good\",\"best\",\"word\"]\n\"barfoofoobarthefoobarman\"\n[\"bar\",\"foo\",\"the\"]"
+  },
+  {
+    "title": "Longest Valid Parentheses",
+    "difficulty": "hard",
+    "content": "Given a string containing just the characters '(' and ')', return the length of the longest valid (well-formed) parentheses substring.\n\n\n\nExample 1:\n\nInput: s = \"(()\"\nOutput: 2\nExplanation: The longest valid parentheses substring is \"()\".\nExample 2:\n\nInput: s = \")()())\"\nOutput: 4\nExplanation: The longest valid parentheses substring is \"()()\".\nExample 3:\n\nInput: s = \"\"\nOutput: 0\n\n\nConstraints:\n\n0 <= s.length <= 3 * 10^4\ns[i] is '(', or ')'.",
+    "testCases": "\"(()\"\n\")()())\"\n\"\""
+  },
+  {
+    "title": "Sudoku Solver",
+    "difficulty": "hard",
+    "content": "Write a program to solve a Sudoku puzzle by filling the empty cells.\n\nA sudoku solution must satisfy all of the following rules:\n\nEach of the digits 1-9 must occur exactly once in each row.\nEach of the digits 1-9 must occur exactly once in each column.\nEach of the digits 1-9 must occur exactly once in each of the 9 3x3 sub-boxes of the grid.\nThe '.' character indicates empty cells.\n\n\n\nExample 1:\nInput: board = [[\"5\",\"3\",\".\",\".\",\"7\",\".\",\".\",\".\",\".\"],[\"6\",\".\",\".\",\"1\",\"9\",\"5\",\".\",\".\",\".\"],[\".\",\"9\",\"8\",\".\",\".\",\".\",\".\",\"6\",\".\"],[\"8\",\".\",\".\",\".\",\"6\",\".\",\".\",\".\",\"3\"],[\"4\",\".\",\".\",\"8\",\".\",\"3\",\".\",\".\",\"1\"],[\"7\",\".\",\".\",\".\",\"2\",\".\",\".\",\".\",\"6\"],[\".\",\"6\",\".\",\".\",\".\",\".\",\"2\",\"8\",\".\"],[\".\",\".\",\".\",\"4\",\"1\",\"9\",\".\",\".\",\"5\"],[\".\",\".\",\".\",\".\",\"8\",\".\",\".\",\"7\",\"9\"]]\nOutput: [[\"5\",\"3\",\"4\",\"6\",\"7\",\"8\",\"9\",\"1\",\"2\"],[\"6\",\"7\",\"2\",\"1\",\"9\",\"5\",\"3\",\"4\",\"8\"],[\"1\",\"9\",\"8\",\"3\",\"4\",\"2\",\"5\",\"6\",\"7\"],[\"8\",\"5\",\"9\",\"7\",\"6\",\"1\",\"4\",\"2\",\"3\"],[\"4\",\"2\",\"6\",\"8\",\"5\",\"3\",\"7\",\"9\",\"1\"],[\"7\",\"1\",\"3\",\"9\",\"2\",\"4\",\"8\",\"5\",\"6\"],[\"9\",\"6\",\"1\",\"5\",\"3\",\"7\",\"2\",\"8\",\"4\"],[\"2\",\"8\",\"7\",\"4\",\"1\",\"9\",\"6\",\"3\",\"5\"],[\"3\",\"4\",\"5\",\"2\",\"8\",\"6\",\"1\",\"7\",\"9\"]]\nExplanation: The input board is shown above and the only valid solution is shown below:\n\n\n\n\nConstraints:\n\nboard.length == 9\nboard[i].length == 9\nboard[i][j] is a digit or '.'.\nIt is guaranteed that the input board has only one solution.",
+    "testCases": "[[\"5\",\"3\",\".\",\".\",\"7\",\".\",\".\",\".\",\".\"],[\"6\",\".\",\".\",\"1\",\"9\",\"5\",\".\",\".\",\".\"],[\".\",\"9\",\"8\",\".\",\".\",\".\",\".\",\"6\",\".\"],[\"8\",\".\",\".\",\".\",\"6\",\".\",\".\",\".\",\"3\"],[\"4\",\".\",\".\",\"8\",\".\",\"3\",\".\",\".\",\"1\"],[\"7\",\".\",\".\",\".\",\"2\",\".\",\".\",\".\",\"6\"],[\".\",\"6\",\".\",\".\",\".\",\".\",\"2\",\"8\",\".\"],[\".\",\".\",\".\",\"4\",\"1\",\"9\",\".\",\".\",\"5\"],[\".\",\".\",\".\",\".\",\"8\",\".\",\".\",\"7\",\"9\"]]"
+  },
+  {
+    "title": "First Missing Positive",
+    "difficulty": "hard",
+    "content": "Given an unsorted integer array nums, return the smallest missing positive integer.\n\nYou must implement an algorithm that runs in O(n) time and uses constant extra space.\n\n\n\nExample 1:\n\nInput: nums = [1,2,0]\nOutput: 3\nExplanation: The numbers in the range [1,2] are all in the array.\nExample 2:\n\nInput: nums = [3,4,-1,1]\nOutput: 2\nExplanation: 1 is in the array but 2 is missing.\nExample 3:\n\nInput: nums = [7,8,9,11,12]\nOutput: 1\nExplanation: The smallest positive integer 1 is missing.\n\n\nConstraints:\n\n1 <= nums.length <= 10^5\n-2^31 <= nums[i] <= 2^31 - 1",
+    "testCases": "[1,2,0]\n[3,4,-1,1]\n[7,8,9,11,12]"
+  },
+  {
+    "title": "Trapping Rain Water",
+    "difficulty": "hard",
+    "content": "Given n non-negative integers representing an elevation map where the width of each bar is 1, compute how much water it can trap after raining.\n\n\n\nExample 1:\n\n\nInput: height = [0,1,0,2,1,0,1,3,2,1,2,1]\nOutput: 6\nExplanation: The above elevation map (black section) is represented by array [0,1,0,2,1,0,1,3,2,1,2,1]. In this case, 6 units of rain water (blue section) are being trapped.\nExample 2:\n\nInput: height = [4,2,0,3,2,5]\nOutput: 9\n\n\nConstraints:\n\nn == height.length\n1 <= n <= 2 * 10^4\n0 <= height[i] <= 10^5",
+    "testCases": "[0,1,0,2,1,0,1,3,2,1,2,1]\n[4,2,0,3,2,5]"
+  },
+  {
+    "title": "Wildcard Matching",
+    "difficulty": "hard",
+    "content": "Given an input string (s) and a pattern (p), implement wildcard pattern matching with support for '?' and '*' where:\n\n'?' Matches any single character.\n'*' Matches any sequence of characters (including the empty sequence).\nThe matching should cover the entire input string (not partial).\n\n \n\nExample 1:\n\nInput: s = \"aa\", p = \"a\"\nOutput: false\nExplanation: \"a\" does not match the entire string \"aa\".\nExample 2:\n\nInput: s = \"aa\", p = \"*\"\nOutput: true\nExplanation: '*' matches any sequence.\nExample 3:\n\nInput: s = \"cb\", p = \"?a\"\nOutput: false\nExplanation: '?' matches 'c', but the second letter is 'a', which does not match 'b'.\n \n\nConstraints:\n\n0 <= s.length, p.length <= 2000\ns contains only lowercase English letters.\np contains only lowercase English letters, '?' or '*'.",
+    "testCases": "\"aa\"\n\"a\"\n\"aa\"\n\"*\"\n\"cb\"\n\"?a\""
+  }
+]
